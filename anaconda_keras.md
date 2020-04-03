@@ -1,6 +1,6 @@
 # How to setup Keras in Anaconda with GPU support
 
-Keras ( https://keras.io/ ) is a meta-framework / high-level API for neural networks. The current version still supports multiple backends like Tensorflow, Theano or CNTK, but in the future only Tensorflow will be supported.
+Keras ( https://keras.io/ ) is a meta-framework / high-level API for neural networks. The current version still supports multiple backends like Tensorflow, Theano or CNTK, but in the future only Tensorflow will be supported. See section "test Keras".
 To enable GPU support for NVIDIA GPU's , you need to install CUDA.
 
 
@@ -31,7 +31,7 @@ Next, install tensorflow and all dependencies:
 conda install tensorflow-gpu
 ```
 
-#### test GPU support
+#### test tensorflow GPU support
 
 To test, if tensorflow can find and use your GPU, open python and type:
 
@@ -44,15 +44,9 @@ expected result:
 > Found device 0 with properties:
 > pciBusID: 0000:01:00.0 name: GeForce RTX 2070 SUPER computeCapability: 7.5
 
-### install Keras
-
-at the anaconda prompt, enter: 
-
-```
-conda install keras
-```
-
 #### test Keras
+
+Keras is now the official high level API for tensorflow. From now on, if you want to use Keras, you should use the tensorflow keras submodule: "import tensorflow.keras".
 
 at the anaconda prompt, open the python editor spyder: 
 
@@ -64,7 +58,7 @@ and paste this small python program into a new python document:
 
 ```python
 from numpy import *
-from keras import *
+from tensorflow.keras import *
 
 model = models.Sequential()
 
@@ -87,32 +81,3 @@ one_hot_labels = utils.to_categorical(labels, num_classes=10)
 # Train the model, iterating on the data in batches of 32 samples
 model.fit(data, one_hot_labels, epochs=10, batch_size=32)
 ```
-
-
-### Manual installation using PIP package manager
-
-Just in case something went wrong; you dont like conda or anaconda, you might try to setup tensorflow using the pip package manager. 
-Now you need to manually install CUDA abd cudnn.
-
-#### NVIDIA GPU: install CUDA and cudnn
-The Tensorflow backend provides both GPU and CPU acceleration. For GPU acceleration to work, you need to install NVIDIA's *proprietary*, closed source the CUDA parallel computing framework. 
-Unfortunately, CUDA currently dominates to market. 
-Tensorflow requres a specific CUDA version. Please check the exact version required before downloading CUDA.
-Go to the tensorflow homepage:
-
-https://www.tensorflow.org/install/gpu
-
-and check section *Software requirements*.
-The current, stable Tensorflow version requires CUDA 10.1 .
-
-Go to the CUDA toolkit archive:
-
-https://developer.nvidia.com/cuda-toolkit-archive
-
-and download the required CUDA version.
-
-##### TODO: cudnn
-copy the dll into a directory that ins in the PATH. 
-
-#### install tensorflow and keras with pip
-TODO
