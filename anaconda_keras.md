@@ -46,7 +46,7 @@ expected result:
 
 #### test Keras
 
-Keras is now the official high level API for tensorflow. From now on, if you want to use Keras, you should use the tensorflow keras submodule: "import tensorflow.keras".
+Keras is now the official high level API for tensorflow. From now on, if you want to use Keras, you should use the tensorflow keras submodule: "import tensorflow.keras". For details, see: https://www.pyimagesearch.com/2019/10/21/keras-vs-tf-keras-whats-the-difference-in-tensorflow-2-0/
 
 at the anaconda prompt, open the python editor spyder: 
 
