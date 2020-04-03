@@ -63,28 +63,26 @@ spyder
 and paste this small python program into a new python document:
 
 ```python
-import numpy as np
-import keras
-from keras.models import Sequential
-from keras.layers import Dense
+from numpy import *
+from keras import *
 
-model = Sequential()
+model = models.Sequential()
 
-model.add(Dense(units=64, activation='relu', input_dim=100))
-model.add(Dense(units=10, activation='softmax'))
+model.add(layers.Dense(units=64, activation='relu', input_dim=100))
+model.add(layers.Dense(units=10, activation='softmax'))
 
-model.compile(loss=keras.losses.categorical_crossentropy,
-              optimizer=keras.optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True),
+model.compile(loss=losses.categorical_crossentropy,
+              optimizer=optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True),
               metrics=['accuracy'])
 
 
 # Generate dummy data
 
-data = np.random.random((1000, 100))
-labels = np.random.randint(10, size=(1000, 1))
+data = random.random((1000, 100))
+labels = random.randint(10, size=(1000, 1))
 
 # Convert labels to categorical one-hot encoding
-one_hot_labels = keras.utils.to_categorical(labels, num_classes=10)
+one_hot_labels = utils.to_categorical(labels, num_classes=10)
 
 # Train the model, iterating on the data in batches of 32 samples
 model.fit(data, one_hot_labels, epochs=10, batch_size=32)
