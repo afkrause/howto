@@ -38,15 +38,16 @@ import tensorflow as tf
 tf.config.list_physical_devices('GPU')
 tf.test.gpu_device_name() 
 ```
-expected result:
+on my PC, above commands print:
 > Found device 0 with properties:
 > pciBusID: 0000:01:00.0 name: GeForce RTX 2070 SUPER computeCapability: 7.5
+indicating that the tensorflow device 0 is a GPU.
 
 #### Test Keras
 
 Keras is now the official high level API for tensorflow. From now on, if you want to use Keras, you should use the tensorflow keras submodule: "import tensorflow.keras". For details, see: https://www.pyimagesearch.com/2019/10/21/keras-vs-tf-keras-whats-the-difference-in-tensorflow-2-0/
 
-at the anaconda prompt, open the python editor spyder: 
+at the anaconda prompt, open the python editor spyder (or use your own favourite python editor): 
 
 ```
 spyder
