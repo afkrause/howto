@@ -41,6 +41,7 @@ tf.test.gpu_device_name()
 on my PC, above commands print:
 > Found device 0 with properties:
 > pciBusID: 0000:01:00.0 name: GeForce RTX 2070 SUPER computeCapability: 7.5
+
 indicating that the tensorflow device 0 is a GPU.
 
 #### Test Keras
