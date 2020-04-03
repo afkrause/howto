@@ -1,8 +1,6 @@
 # How to setup Keras in Anaconda with GPU support
 
-Keras ( https://keras.io/ ) is a meta-framework / high-level API for neural networks. The current version still supports multiple backends like Tensorflow, Theano or CNTK, but in the future only Tensorflow will be supported. See section "test Keras".
-To enable GPU support for NVIDIA GPU's , you need to install CUDA.
-
+Keras ( https://keras.io/ ) is a meta-framework / high-level API for neural networks. The current version still supports multiple backends like Tensorflow, Theano or CNTK, but in the future only Tensorflow will be supported (for details, see section "test Keras"). Therefore, this description focuses on Tensorflow + Keras.
 
 ## Install Anaconda
 
