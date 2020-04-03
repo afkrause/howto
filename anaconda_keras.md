@@ -4,7 +4,7 @@ Keras ( https://keras.io/ ) is a meta-framework / high-level API for neural netw
 To enable GPU support for NVIDIA GPU's , you need to install CUDA.
 
 
-## install Anaconda
+## Install Anaconda
 
 Anaconda is a preconfigured python environment for scientific computations. Using anaconda solves a lot of dependency issues.
 Download anaconda with Python 3.7 and select the 64bit edition (important!)
@@ -13,7 +13,7 @@ https://www.anaconda.com/distribution/
 
 Next, test anaconda. go to the start menu and select "Anaconda Prompt". enter *python* and test if everything works as expected.
 
-### install Tensorflow usind conda package manager
+### Install Tensorflow using conda package manager
 
 The conda package manager is a tool that helps to deal with external library / dll dependencies, going beyond the capabilites of pip. For example, here, conda installs NVIDIA's *proprietary*, closed source the CUDA parallel computing framework and the cudnn sdk (to download that manually would require a totally annoying user registration and login at nvidias homepage).
 
@@ -31,7 +31,7 @@ Next, install tensorflow and all dependencies:
 conda install tensorflow-gpu
 ```
 
-#### test tensorflow GPU support
+#### Test Tensorflow GPU support
 
 To test, if tensorflow can find and use your GPU, open python and type:
 
@@ -44,7 +44,7 @@ expected result:
 > Found device 0 with properties:
 > pciBusID: 0000:01:00.0 name: GeForce RTX 2070 SUPER computeCapability: 7.5
 
-#### test Keras
+#### Test Keras
 
 Keras is now the official high level API for tensorflow. From now on, if you want to use Keras, you should use the tensorflow keras submodule: "import tensorflow.keras". For details, see: https://www.pyimagesearch.com/2019/10/21/keras-vs-tf-keras-whats-the-difference-in-tensorflow-2-0/
 
